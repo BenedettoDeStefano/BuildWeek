@@ -1,0 +1,6 @@
+<ng-container *ngFor="let item of postsArray">
+<ul>
+  <li>{{item.title}} <button type="button" (click)="deletePostById(item.id)">Delete</button> <button type="button" (click)="selectPostById(item.id)">EDIT</button></li>
+</ul>
+</ng-container>
+
