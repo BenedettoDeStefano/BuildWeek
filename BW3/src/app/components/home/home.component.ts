@@ -26,6 +26,11 @@ export class HomeComponent implements OnInit {
       this.postSrv.deletePost(postId).subscribe(
         (response) => {
           console.log('Post eliminato:', response);
+          this.postSrv.getPosts().subscribe((data: any) => {
+            this.postsArray = data;
+            console.log(data);
+        });
+        alert('Post eliminato');
         },
         (error) => {
           console.error('Errore durante l\'eliminazione del post:', error);
