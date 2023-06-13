@@ -25,7 +25,7 @@ const rotte: Route[] = [
     component: EditPostComponent
   },
   {
-    path: 'view-post',
+    path: 'view-post/:id',
     component: ViewPostComponent
   }
 ]
